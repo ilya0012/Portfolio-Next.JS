@@ -12,7 +12,7 @@ const Hero = () => {
                 <Image className="rounded-full  shadow-2xl" src='/MyPhoto.jpg' alt='image' width={400} height={400} />
             </div>
             <div className="mt-2 md:w-3/5">
-                <h1 className="mt-5 md:mt-0 font-serif font-bold text-4xl md:text-3xl">Hi, I am Ilia, Web Developer! </h1>
+                <h1 className="mt-5 md:mt-0 font-serif font-bold text-4xl md:text-3xl">Hi, I am Ilia, Web Developer!</h1>
                 <p className="md:text-[20px] mt-4 mb-6 font-serif   ">
                     Based in Everett, WA.<br/> I create a responsive websites for your business.
                 </p>

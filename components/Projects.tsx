@@ -8,14 +8,14 @@ import SlideUp from './slideUp'
 const projects = [
   {
     name: 'Modern GPT3 Website',
-    description: 'Modern presentation of GPT3, built on React with CSS using BEM Methodology, full responsive on mobile and Desktop',
+    description: 'Modern presentation of GPT3, built on React with CSS using BEM Methodology, full responsive on Mobile and Desktop',
     image: '/modernAIApp.jpg',
     gitHub: 'https://github.com/ilya0012/Modern-Website-GP3',
     link: 'https://modernairepresentation.website'
   },
   {
     name: 'Modern Restaurant Menu',
-    description: 'Modern Restaurant Menu, built on React with CSS using BEM Methodology, full responsive on mobile and Desktop',
+    description: 'Modern Restaurant Menu, built on React with CSS using BEM Methodology, full responsive on Mobile and Desktop',
     image: '/RestaurantMenuApp.jpg',
     gitHub: 'https://github.com/ilya0012/Modern-Restaurant-Menu',
     link: 'https://iliachistov.com/'
