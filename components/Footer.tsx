@@ -26,9 +26,13 @@ const Footer = () => {
                 </a>
             </div>
         </div>
-    <div className='flex flex-row items center justify-start'>
-        <p className='text-neutral-500 dark:text-neutral-100 mb-2'>Mail: iliachistofff@gmail.com</p> 
-        <AiOutlineMail className='hover:-translate-y-1 transition-transform cursore-pointer text-neutral-500 dark:text-neutral-100' />
+    <div className='flex flex-row text-neutral-900 md:justify-between'>
+        <p className='flex flex-row-reverse items-center justify-center text-neutral-500 dark:text-neutral-100 mb-2'>
+            <span className='flex align-baseline font-bold text-[20px]'>iliachistofff@gmail.com</span>
+            <AiOutlineMail size={30} className='mx-4 justify-center flex hover:-translate-y-1 transition-transform cursore-pointer text-neutral-500 dark:text-neutral-100' />
+        
+        </p> 
+            
     </div>
     </footer>
   )
