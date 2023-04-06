@@ -1,5 +1,5 @@
 "use client"
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import { Link } from 'react-scroll/modules'
 import { useTheme } from 'next-themes'
 import { RiMoonFill, RiSunLine } from "react-icons/ri"
@@ -26,9 +26,26 @@ const NAV_ITEMS: Array<NavItem> = [
 ]
 
 const Navbar = () => {
-   const { systemTheme, theme, setTheme } = useTheme() 
-    const currentTheme = theme === 'system' ? systemTheme: theme
+    const { resolvedTheme, setTheme } = useTheme()
     const [navbar, setNavbar] = useState(false)
+    const [themeReady, setThemeReady] = useState(false)
+  
+    // Save user's theme preference to local storage
+    useEffect(() => {
+      const userTheme = localStorage.getItem('theme')
+      if (userTheme) {
+        setTheme(userTheme)
+      } else {
+        localStorage.setItem('theme', 'light')
+        setTheme('light')
+      }
+    }, [])
+  
+    useEffect(() => {
+      if (resolvedTheme) {
+        setThemeReady(true)
+      }
+    }, [resolvedTheme])
 
     return (
         <header className='w-full mx-auto px-4 sm:px-20 fixed top-0 z-50 shadow bg-white dark:bg-stone-900 dark:border-b dark:border-stone-600'>
@@ -82,20 +99,26 @@ const Navbar = () => {
                                 )
                             })}
                             
-                            {currentTheme === 'dark' ? (
+                            {resolvedTheme === 'dark' ? (
                                 <button
-                                onClick={() => setTheme("light")}
-                                className="bg-slate-100 p-2 rounded-xl"
-                            >
-                                <RiSunLine size={25} color="black" />
-                            </button>
-                            ) : (
-                            <button
-                                onClick={() => setTheme("dark")}
-                                className="bg-slate-100 p-2 rounded-xl"
-                            >
-                                <RiMoonFill size={25} />
-                            </button>
+                                    onClick={() => {
+                                    setTheme("light")
+                                    localStorage.setItem('theme', 'light')
+                                    }}
+                                    className="bg-slate-100 p-2 rounded-xl"
+                                >
+                                    <RiSunLine size={25} color="black" />
+                                </button>
+                                ) : (
+                                <button
+                                    onClick={() => {
+                                    setTheme("dark")
+                                    localStorage.setItem('theme', 'dark')
+                                    }}
+                                    className="bg-slate-100 p-2 rounded-xl"
+                                >
+                                    <RiMoonFill size={25} color='black'/>
+                                </button>
                             )}
                         </div>
                     </div>
