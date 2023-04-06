@@ -99,17 +99,7 @@ const Navbar = () => {
                                 )
                             })}
                             
-                            {resolvedTheme === 'dark' ? (
-                                <button
-                                    onClick={() => {
-                                    setTheme("light")
-                                    localStorage.setItem('theme', 'light')
-                                    }}
-                                    className="bg-slate-100 p-2 rounded-xl"
-                                >
-                                    <RiSunLine size={25} color="black" />
-                                </button>
-                                ) : (
+                            {resolvedTheme === 'light' ? (
                                 <button
                                     onClick={() => {
                                     setTheme("dark")
@@ -118,6 +108,16 @@ const Navbar = () => {
                                     className="bg-slate-100 p-2 rounded-xl"
                                 >
                                     <RiMoonFill size={25} color='black'/>
+                                </button>
+                                ) : (
+                                <button
+                                    onClick={() => {
+                                    setTheme("light")
+                                    localStorage.setItem('theme', 'light')
+                                    }}
+                                    className="bg-slate-100 p-2 rounded-xl"
+                                >
+                                    <RiSunLine size={25} color="black" />
                                 </button>
                             )}
                         </div>
