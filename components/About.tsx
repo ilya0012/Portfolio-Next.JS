@@ -2,18 +2,20 @@ import React from 'react'
 import Image from 'next/image'
 
 const skills = [
+    {skill: "Python"},
+    {skill: "Django"},
+    {skill: "SQL"},
+    {skill: "Databases"},
     {skill: "JavaScript"},
-    {skill: "HTML"},
-    {skill: "CSS"},
-    {skill: "TailWind"},
     {skill: "React.js"},
-    {skill: "Node.js"},
-    {skill: "Express.js"},
-    {skill: "MongoDB"},
+    {skill: "HTML5"},
+    {skill: "CSS3"},
+    {skill: "TailWind"},
     {skill: "Git"},
     {skill: "GitHub"},
-    {skill: "WordPress"},
+    {skill: "Microsoft Office"},
     {skill: "Next.js"},
+    {skill: "Node.js"},
     {skill: "MongoDB"},
     {skill: "TypeScript"},
     {skill: "Docker"}
@@ -34,7 +36,7 @@ const About = () => {
                         <span className='font-bold'>{` `}</span> My name is Ilia, {" "} 
                         <span className='font-bold'>{`highly ambitious`}</span>, 
                         <span className='font-bold'>{` self-motivated`}</span>, and
-                        <span className='font-bold'>{` quick learning`}</span> Front End Developer
+                        <span className='font-bold'>{` quick learning`}</span> Full Stack Developer
                         based in Seattle, WA. 
                     </p>
                     <br />
